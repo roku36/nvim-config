@@ -336,6 +336,9 @@ hi Normal guibg=NONE ctermbg=NONE
 hi NormalNC guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi Float guibg=Black
+hi LazyGitFloat guibg=Black
+hi TelescopeNormal guibg=Black
 hi MyHighlight guibg=Black
 match MyHighlight /./
 ]]
