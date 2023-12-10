@@ -96,11 +96,11 @@ require('lazy').setup({
   },
   {
     -- LazyGit
-      "kdheepak/lazygit.nvim",
-      -- optional for floating window border decoration
-      dependencies = {
-          "nvim-lua/plenary.nvim",
-      },
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
   {
     -- Autocompletion
@@ -120,7 +120,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -335,9 +335,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 vim.keymap.set('i', 'jk', '<ESC>', { silent = true })
 vim.keymap.set('n', '<leader>/', function()
-    require('Comment.api').toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
+  require('Comment.api').toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
 end, { desc = 'Toggle line comment' })
-vim.keymap.set('v', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", { desc = 'Toggle comment for selection' })
+vim.keymap.set('v', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+  { desc = 'Toggle comment for selection' })
+
+require('oil').setup()
+vim.keymap.set('n', '<leader>o', "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
