@@ -336,7 +336,8 @@ hi Normal guibg=NONE ctermbg=NONE
 hi NormalNC guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
-hi Float guibg=Black
+hi NormalFloat guibg=Black
+hi FloatBorder guibg=Black
 hi LazyGitFloat guibg=Black
 hi LazyGitBorder guibg=Black
 hi TelescopeNormal guibg=Black
