@@ -338,7 +338,11 @@ hi NonText guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
 hi Float guibg=Black
 hi LazyGitFloat guibg=Black
+hi LazyGitBorder guibg=Black
 hi TelescopeNormal guibg=Black
+hi TelescopePromptBorder guibg=Black
+hi TelescopeResultsBorder guibg=Black
+hi TelescopePreviewBorder guibg=Black
 hi MyHighlight guibg=Black
 match MyHighlight /./
 ]]
