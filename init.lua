@@ -340,6 +340,7 @@ hi NormalFloat guibg=Black
 hi FloatBorder guibg=Black
 hi LazyGitFloat guibg=Black
 hi LazyGitBorder guibg=Black
+hi NotifyBackground guibg=Black
 hi TelescopeNormal guibg=Black
 hi TelescopePromptBorder guibg=Black
 hi TelescopeResultsBorder guibg=Black
