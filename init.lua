@@ -229,6 +229,8 @@ require('lazy').setup({
     },
   },
 
+
+
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -331,23 +333,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-vim.cmd [[
-hi Normal guibg=NONE ctermbg=NONE
-hi NormalNC guibg=NONE ctermbg=NONE
-hi NonText guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
-hi NormalFloat guibg=Black
-hi FloatBorder guibg=Black
-hi LazyGitFloat guibg=Black
-hi LazyGitBorder guibg=Black
-hi NotifyBackground guibg=Black
-hi TelescopeNormal guibg=Black
-hi TelescopePromptBorder guibg=Black
-hi TelescopeResultsBorder guibg=Black
-hi TelescopePreviewBorder guibg=Black
-hi MyHighlight guibg=Black
-match MyHighlight /./
-]]
+-- vim.cmd [[
+-- hi Normal guibg=NONE ctermbg=NONE
+-- hi NormalNC guibg=NONE ctermbg=NONE
+-- hi NonText guibg=NONE ctermbg=NONE
+-- hi EndOfBuffer guibg=NONE ctermbg=NONE
+-- hi NormalFloat guibg=Black
+-- hi FloatBorder guibg=Black
+-- hi LazyGitFloat guibg=Black
+-- hi LazyGitBorder guibg=Black
+-- hi NotifyBackground guibg=Black
+-- hi TelescopeNormal guibg=Black
+-- hi TelescopePromptBorder guibg=Black
+-- hi TelescopeResultsBorder guibg=Black
+-- hi TelescopePreviewBorder guibg=Black
+-- hi MyHighlight guibg=Black
+-- match MyHighlight /./
+-- ]]
 
 
 -- [[ Configure Telescope ]]
@@ -680,6 +682,35 @@ cmp.setup {
     { name = 'path' },
   },
 }
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    vim.cmd [[
+        hi Normal guibg=NONE ctermbg=NONE
+        hi NormalNC guibg=NONE ctermbg=NONE
+        hi NonText guibg=NONE ctermbg=NONE
+        hi EndOfBuffer guibg=NONE ctermbg=NONE
+        hi NormalFloat guibg=Black
+        hi FloatBorder guibg=Black
+        hi LazyGitFloat guibg=Black
+        hi LazyGitBorder guibg=Black
+        hi NotifyBackground guibg=Black
+        hi TelescopeNormal guibg=Black
+        hi TelescopePromptBorder guibg=Black
+        hi TelescopeResultsBorder guibg=Black
+        hi TelescopePreviewBorder guibg=Black
+        hi MyHighlight guibg=Black
+        match MyHighlight /./
+        ColorizerAttachToBuffer
+    ]]
+    -- require("colorizer").setup {
+    --   filetypes = {
+    --     "*",
+    --   }
+    -- }
+  end
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
