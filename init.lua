@@ -21,6 +21,14 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- set encodings
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencodings = 'utf-8, euc-jp, sjis, latin1'
+vim.opt.fileformats = 'unix,dos,mac'
+
+-- lang en_US.UTF-8
+vim.opt.langmenu = 'en_US.UTF-8'
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
