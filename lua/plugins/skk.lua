@@ -8,11 +8,13 @@ return {
     config = function()
       -- require('denops-lazy').load('skkeleton', { wait_load = false })
       -- vim.keymap.set({ 'i', 't' }, '<C-\\>', '<Plug>(skkeleton-toggle)', { remap = true })
-      vim.keymap.set({ 'i', 't' }, '<C-j>', '<Plug>(skkeleton-toggle)')
-      -- vim.keymap.set({ 'i', 't' }, '<C-\\>', '<Plug>(skkeleton-disable)', { remap = true })
+      vim.keymap.set({ 'i', 't' }, '<C-i>', '<Plug>(skkeleton-enable)', { remap = true })
+      -- vim.keymap.set({ 'i', 't' }, "\'", '<Plug>(skkeleton-disable)', { remap = true })
+      vim.keymap.set({ 'i', 't' }, "L", '<Plug>(skkeleton-disable)', { remap = true })
       vim.fn['skkeleton#config']({
         debug = false,
         eggLikeNewline = true,
+        keepState = true,
         globalDictionaries = {
           '~/.skk/SKK-JISYO.L',
           -- '~/.skk/SKK-JISYO.propernoun',
@@ -26,7 +28,11 @@ return {
         userJisyo = '~/.skk/skkeleton.txt',
       })
       vim.fn['skkeleton#register_keymap']('input', '`', 'katakana');
+      vim.fn['skkeleton#register_keymap']('input', '@', 'zenkaku');
+      vim.fn['skkeleton#register_keymap']('input', ';', 'henkanPoint');
       vim.fn['skkeleton#register_keymap']('henkan', '`', 'katakana');
+      vim.fn['skkeleton#register_keymap']('henkan', 'J', 'henkanForward');
+      vim.fn['skkeleton#register_keymap']('henkan', 'K', 'henkanBackward');
     end
   },
   {
