@@ -17,5 +17,13 @@ return {
     config = function()
       require('modes').setup()
     end
-  }
+  },
+  -- {
+  --   "edluffy/hologram.nvim",
+  --   config = function()
+  --     require("hologram").setup {
+  --       auto_display = true,
+  --     }
+  --   end
+  -- },
 }

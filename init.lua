@@ -320,7 +320,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
-vim.keymap.set('i', 'jk', '<ESC>', { silent = true })
 vim.keymap.set('n', '<leader>/', function()
   require('Comment.api').toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
 end, { desc = 'Toggle line comment' })

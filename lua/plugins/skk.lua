@@ -28,7 +28,8 @@ return {
         },
         userJisyo = '~/.skk/skkeleton.txt',
       })
-      vim.fn['skkeleton#register_keymap']('input', 'Q', 'hankatakana');
+      vim.fn['skkeleton#register_keymap']('input', 'Q', 'katakana');
+      vim.fn['skkeleton#register_keymap']('input', 'W', 'hankatakana');
       vim.fn['skkeleton#register_keymap']('input', '@', 'zenkaku');
       vim.fn['skkeleton#register_keymap']('input', ' ', 'henkanPoint');
       vim.fn['skkeleton#register_keymap']('input', ';', 'henkanFirst');
