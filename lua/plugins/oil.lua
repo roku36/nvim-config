@@ -8,6 +8,9 @@ return
 		require("oil").setup({
 			win_options = {
 				cursorcolumn = true,
+			},
+			view_options = {
+				show_hidden = true,
 			}
 		})
 	end,

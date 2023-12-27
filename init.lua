@@ -600,6 +600,7 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {},
+  -- gdscript = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
@@ -626,6 +627,8 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
+
+require("lspconfig").gdscript.setup {}
 
 mason_lspconfig.setup_handlers {
   function(server_name)
@@ -719,7 +722,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         hi MyHighlight guibg=Black
         match MyHighlight /./
         ColorizerAttachToBuffer
-    ]]
+        ]]
     -- require("colorizer").setup {
     --   filetypes = {
     --     "*",
