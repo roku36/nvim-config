@@ -12,8 +12,11 @@ return {
             engine = "nvim-cmp",
           }
         },
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.dirman"] = {      -- Manages Neorg workspaces
+        ["core.concealer"] = {},     -- Adds pretty icons to your documents
+        -- ["core.ui"] = {},          -- Add calendar integration
+        ["core.ui.calendar"] = {},   -- Add calendar integration
+        ["core.ui.text_popup"] = {}, -- Add calendar integration
+        ["core.dirman"] = {          -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = "~/notes",
@@ -21,6 +24,20 @@ return {
           },
         },
         ["core.integrations.telescope"] = {},
+        ["core.keybinds"] = {
+          config = {
+            hook = function(keybinds)
+              -- open today's notes
+              keybinds.map("norg", "n", "<leader>tt", "<cmd>Neorg journal today<CR>", { desc = "Open today's notes" })
+              -- insert current clock and linebreak, and execute <C-i>
+              keybinds.map("norg", "n", "<leader>dd", ":put =strftime('%H:%M')<CR>==o",
+                -- keybinds.map("norg", "n", "<leader>dd", "o<C-R>=strftime('%H:%M')<CR>",
+                { desc = "Insert current time" })
+              keybinds.remap("norg", "i", "<C-t>", "<CR><C-R>=strftime('%H:%M')<CR><CR>",
+                { desc = "Insert current time" })
+            end,
+          }
+        }
       },
     }
     local neorg_callbacks = require("neorg.core.callbacks")

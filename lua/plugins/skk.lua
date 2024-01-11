@@ -15,6 +15,7 @@ return {
       vim.fn['skkeleton#config']({
         debug = false,
         eggLikeNewline = true,
+        keepMode = true,
         keepState = true,
         globalDictionaries = {
           '~/.skk/SKK-JISYO.L',

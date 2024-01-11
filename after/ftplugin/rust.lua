@@ -7,6 +7,7 @@ vim.keymap.set(
   end,
   { silent = true, buffer = bufnr }
 )
+
 vim.lsp.inlay_hint.enable(bufnr, true)
 
 vim.cmd [[
