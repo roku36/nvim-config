@@ -10,6 +10,6 @@ vim.keymap.set(
 
 -- vim.lsp.inlay_hint.enable(bufnr, true)
 
-vim.cmd [[
-  hi LspInlayHint guibg=Gray guifg=Black
-]]
+-- vim.cmd [[
+--   hi LspInlayHint guibg=Gray guifg=Black
+-- ]]
