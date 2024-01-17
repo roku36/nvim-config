@@ -736,6 +736,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end
 })
 
+-- auto save on edited
+vim.api.nvim_create_autocmd({"TextChanged", "InsertLeave"}, {
+  pattern = "*",
+  command = "silent! write",
+})
+
 -- vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 --   pattern = "*.wgsl",
 --   callback = function()
