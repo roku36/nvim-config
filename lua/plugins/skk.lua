@@ -4,8 +4,9 @@ return {
     enabled = true,
     event = { 'InsertEnter', 'CmdlineEnter' },
     -- cmd = { 'Telescope' },
-    dependencies = { 'vim-denops/denops.vim', 'rcarriga/nvim-notify' },
+    dependencies = { 'vim-denops/denops.vim', 'rcarriga/nvim-notify', 'yukiyano/denops-lazy.nvim' },
     config = function()
+      require('denops-lazy').load('skkeleton', {wait_load = false})
       vim.keymap.set({ 'i', 't' }, '<F29>', '<Plug>(skkeleton-toggle)', { remap = true })
       vim.keymap.set({ 'i', 't' }, '<C-F5>', '<Plug>(skkeleton-toggle)', { remap = true })
       vim.fn['skkeleton#config']({
