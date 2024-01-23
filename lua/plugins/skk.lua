@@ -1,6 +1,7 @@
 return {
   {
     'vim-skk/skkeleton',
+    commit = '1bc7a93d8dd110c859a1c0a2a6be1e21402908ac',
     enabled = true,
     event = { 'InsertEnter', 'CmdlineEnter' },
     cmd = { 'Telescope' },

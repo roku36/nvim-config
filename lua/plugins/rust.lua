@@ -13,7 +13,7 @@ return {
   {
     'mrcjkb/rustaceanvim',
     version = '^3', -- Recommended
-    ft = { 'rust' },
+    ft = { 'rust', 'norg' },
     --
     keys = {
       { '<leader>rr', '<cmd>RustLsp runnables<cr>',  desc = 'Runnables' },

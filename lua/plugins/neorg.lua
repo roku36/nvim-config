@@ -23,6 +23,7 @@ return {
             },
           },
         },
+        ["core.syntax"] = {},
         ["core.integrations.telescope"] = {},
         ["core.keybinds"] = {
           config = {
