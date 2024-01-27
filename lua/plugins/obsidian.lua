@@ -16,6 +16,9 @@ return {
 
     -- see below for full list of optional dependencies 👇
   },
+  keys = {
+    { '<leader>dd', ":put =strftime('%H:%M')<CR>==o",  desc = 'insert current time' },
+  },
   opts = {
     workspaces = {
       {

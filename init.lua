@@ -217,7 +217,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'roku36/Comment.nvim', opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
