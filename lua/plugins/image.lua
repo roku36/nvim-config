@@ -1,5 +1,7 @@
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+package.path = package.path .. ";/Users/roku/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";/Users/roku/.luarocks/share/lua/5.1/?.lua;"
 
 _G.open_image_under_cursor = function()
   local line = vim.api.nvim_get_current_line()

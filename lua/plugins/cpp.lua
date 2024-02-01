@@ -17,4 +17,5 @@ return {
   --   }
   --   require("ccls").setup { lsp = { lspconfig = server_config } }
   -- end
+  -- "neoclide/coc.nvim",
 }
