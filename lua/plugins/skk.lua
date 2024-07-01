@@ -10,7 +10,7 @@ return {
     config = function()
       -- require('denops-lazy').load('skkeleton', {wait_load = false})
       vim.keymap.set({ 'i', 't' }, '<F29>', '<Plug>(skkeleton-toggle)', { remap = true })
-      vim.keymap.set({ 'i', 't' }, '<C-F5>', '<Plug>(skkeleton-toggle)', { remap = true })
+      vim.keymap.set({ 'i', 't' }, '<F17>', '<Plug>(skkeleton-toggle)', { remap = true })
       vim.fn['skkeleton#config']({
         -- debug = false,
         eggLikeNewline = true,

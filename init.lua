@@ -727,7 +727,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
         hi TelescopePreviewBorder guibg=Black
         hi MyHighlight guibg=Black
         match MyHighlight /./
-        ColorizerAttachToBuffer
         ]]
     -- require("colorizer").setup {
     --   filetypes = {

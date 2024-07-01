@@ -5,12 +5,12 @@ return {
       require('neoscroll').setup {}
     end
   },
-  {
-    "NvChad/nvim-colorizer.lua",
-    config = function()
-      require("colorizer").setup {}
-    end
-  },
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   config = function()
+  --     require("colorizer").setup {}
+  --   end
+  -- },
   {
     "mvllow/modes.nvim",
     tag = 'v0.2.0',
@@ -18,6 +18,12 @@ return {
       require('modes').setup()
     end
   },
+  {
+    "uga-rosa/ccc.nvim",
+    opts = {
+      highlighter = { auto_enable = false},
+    },
+  }
   -- {
   --   "edluffy/hologram.nvim",
   --   config = function()
