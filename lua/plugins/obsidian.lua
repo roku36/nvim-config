@@ -24,7 +24,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/zk",
+        path = "~/quartz/content",
       },
     },
 
@@ -38,6 +38,12 @@ return {
       date_format = "%Y-%m-%d-%a",
       time_format = "%H:%M",
     },
+    ---@param url string
+    follow_url_func = function(url)
+      -- Open the URL in the default web browser.
+      vim.fn.jobstart({"open", url})  -- Mac OS
+      -- vim.fn.jobstart({"xdg-open", url})  -- linux
+    end,
     -- Optional, alternatively you can customize the frontmatter data.
     ---@return table
     note_frontmatter_func = function(note)
