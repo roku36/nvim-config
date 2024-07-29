@@ -12,8 +12,9 @@ vim.g.rustaceanvim = {
 return {
   {
     'mrcjkb/rustaceanvim',
-    version = '^3', -- Recommended
+    version = '^4', -- Recommended
     ft = { 'rust', 'norg' },
+    lazy = false,
     --
     keys = {
       { '<leader>rr', '<cmd>RustLsp runnables<cr>',  desc = 'Runnables' },

@@ -1,6 +1,7 @@
 local bufnr = vim.api.nvim_get_current_buf()
 
-vim.lsp.inlay_hint.enable(bufnr, true)
+vim.lsp.inlay_hint.enable(true)
+-- vim.lsp.inlay_hint.enable(bufnr, true)
 
 vim.cmd [[
   hi LspInlayHint guibg=Gray guifg=Black
