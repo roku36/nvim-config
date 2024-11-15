@@ -1,4 +1,4 @@
-vim.o.conceallevel = 2
+vim.o.conceallevel = 0
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
@@ -21,6 +21,14 @@ return {
     { '<leader>dd', ":put =strftime('%H:%M')<CR>==o",  desc = 'insert current time' },
   },
   opts = {
+    ui = {
+      enable = false,
+      checkboxes = {
+        -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
+        [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+        ["x"] = { char = "", hl_group = "ObsidianDone" },
+      },
+    },
     workspaces = {
       {
         name = "personal",
