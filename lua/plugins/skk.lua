@@ -1,9 +1,9 @@
 return {
   {
     'vim-skk/skkeleton',
-    commit = '1bc7a93d8dd110c859a1c0a2a6be1e21402908ac',
+    -- commit = '1bc7a93d8dd110c859a1c0a2a6be1e21402908ac',
     enabled = true,
-    event = { 'InsertEnter', 'CmdlineEnter' },
+    event = { 'InsertEnter', 'CmdlineEnter'},
     cmd = { 'Telescope' },
     -- dependencies = { 'vim-denops/denops.vim', 'rcarriga/nvim-notify', 'yukiyano/denops-lazy.nvim' },
     dependencies = { 'vim-denops/denops.vim', 'rcarriga/nvim-notify' },
@@ -11,6 +11,7 @@ return {
       -- require('denops-lazy').load('skkeleton', {wait_load = false})
       vim.keymap.set({ 'i', 't' }, '<F29>', '<Plug>(skkeleton-toggle)', { remap = true })
       vim.keymap.set({ 'i', 't' }, '<F17>', '<Plug>(skkeleton-toggle)', { remap = true })
+      vim.keymap.set({ 'i', 't' }, '<S-F5>', '<Plug>(skkeleton-toggle)', { remap = true })
       vim.fn['skkeleton#config']({
         -- debug = false,
         eggLikeNewline = true,
@@ -27,7 +28,7 @@ return {
           { '~/.skk/azik_us.rule', 'utf-8' },
         },
         -- userDictionary = '~/.skk/skkeleton.txt',
-        userJisyo = '~/.skk/skkeleton.txt',
+        userDictionary = '~/.skk/skkeleton.txt',
       })
       vim.fn['skkeleton#register_keymap']('input', 'Q', 'katakana');
       -- vim.fn['skkeleton#register_keymap']('input', 'W', 'hankatakana');
@@ -42,10 +43,6 @@ return {
   },
   {
     'delphinus/skkeleton_indicator.nvim',
-    event = { 'InsertEnter', 'CmdlineEnter' },
-    cmd = { 'Telescope' },
-    config = function()
-      require('skkeleton_indicator').setup({})
-    end
+    opts = {}
   }
 }
