@@ -24,5 +24,9 @@ return {
     },
     -- config = function()
     -- end
+  },
+  {
+    "ron-rs/ron.vim",
+    ft = { "ron" },
   }
 }

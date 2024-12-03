@@ -15,9 +15,6 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now :)
 --]]
 
-vim.lsp.handlers["textDocument/documentColor"] = function()
-  -- このハンドラーで何もしない
-end
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -748,7 +745,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
         hi TelescopePromptBorder guibg=Black
         hi TelescopeResultsBorder guibg=Black
         hi TelescopePreviewBorder guibg=Black
-        hi MyHighlight guibg=Black
+        " hi MyHighlight guibg=Black
+        hi MyHighlight guibg=#111111
+        hi RenderMarkdownMath guibg=DarkRed
+        hi NoiceCmdlinePopup guibg=black
         match MyHighlight /./
         ]]
     -- require("colorizer").setup {
