@@ -1,8 +1,13 @@
 return {
   {
     'Bekaboo/dropbar.nvim',
+    dependencies = {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      build = 'make'
+    },
     config = function()
-      vim.keymap.set('n', '<leader>dp', require("dropbar.api").pick, { desc = 'Open Dropbar' })
+      local dropbar_api = require('dropbar.api')
+      vim.keymap.set('n', '<leader>dp', dropbar_api.pick, { desc = 'Open Dropbar' })
     end
   }
 }

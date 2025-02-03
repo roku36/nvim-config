@@ -749,6 +749,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         hi MyHighlight guibg=#111111
         hi RenderMarkdownMath guibg=DarkRed
         hi NoiceCmdlinePopup guibg=black
+        hi @lsp.mod.consuming.rust gui=italic
         match MyHighlight /./
         ]]
     -- require("colorizer").setup {

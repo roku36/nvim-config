@@ -4,6 +4,8 @@ return {
   version = '1.*',
   config = function()
     require 'typst-preview'.setup {
+      -- open_cmd = 'open -a Min %s'
+      open_cmd = 'osascript -e \'tell application "System Events" to keystroke "d" using {command down}\' && osascript -e \'tell application "System Events" to keystroke "awrit %s" & return\''
       -- debug = true,
     }
   end,
