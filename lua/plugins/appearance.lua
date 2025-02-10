@@ -55,8 +55,15 @@ return {
     "HakonHarnes/img-clip.nvim",
     event = "VeryLazy",
     opts = {
-      -- add options here
-      -- or leave it empty to use the default settings
+      default = {
+        dir_path = "content/Attachments",
+        relative_to_current_file = true,
+      },
+      filetypes = {
+        markdown = {
+          template = "![$CURSOR]($FILE_NAME)",
+        },
+      },
     },
     keys = {
       -- suggested keymap
