@@ -63,6 +63,14 @@ return {
         markdown = {
           template = "![$CURSOR]($FILE_NAME)",
         },
+        typst = {
+          template = [[
+#figure(
+  image("$FILE_PATH", width: 100%),
+  caption: [$CURSOR],
+) <fig-$LABEL>
+    ]], ---@type string | fun(context: table): string
+        },
       },
     },
     keys = {
