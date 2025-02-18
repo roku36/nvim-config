@@ -46,18 +46,28 @@ return {
     event = { "VeryLazy" },
     build = "deno task --quiet build:fast",
     config = function()
-      require("peek").setup()
+      require("peek").setup({
+        -- theme = 'light',
+        close_on_bdelete = false,
+        app = 'browser',
+      })
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
   {
     "HakonHarnes/img-clip.nvim",
     event = "VeryLazy",
     opts = {
       default = {
-        dir_path = "content/Attachments",
-        relative_to_current_file = true,
+        -- dir_path = "content/Attachments",
+        -- relative_to_current_file = true,
       },
       filetypes = {
         markdown = {
